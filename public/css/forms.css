@@ -1,0 +1,38 @@
+form.auth {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-row-gap: 0.5em;
+    box-shadow: 0px 0px 10px #aaa;
+    padding: 1em;
+    border-bottom-left-radius: 0.5em;
+    border-bottom-right-radius: 0.5em;
+    background-color: #fff;
+    display: none;
+}
+form.auth.active {
+    display: grid;
+}
+input {
+    padding: 0.8em;
+    border-radius: 0.3em;
+    border: none;
+    background-color: #eee;
+}
+input[type="submit"] {
+    background-color: #aaa;
+    cursor: pointer;
+    color: #fff;
+    width: 50%;
+    margin: auto;
+    margin-top: 2em;
+}
+input:focus {
+    outline: none;
+    box-shadow: inset 0px 0px 5px #aaa;
+}
+button {
+    padding: 0.5em;
+    background-color: #555;
+    border: none;
+    border-radius: 0.5em;
+}

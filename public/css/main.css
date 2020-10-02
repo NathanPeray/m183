@@ -1,0 +1,66 @@
+@import url("forms.css");
+@import url("station.css");
+body {
+    background-color: #eee;
+    font-family: calibri;
+}
+* {
+    margin: 0;
+    padding: 0;
+}
+
+#content.split {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    vertical-align: middle;
+}
+#content .register, #content .login {
+    padding: 3em;
+    margin: auto 0;
+    text-align: center;
+}
+#content .register .head, #content .login .head {
+    display: block;
+    padding: 2em;
+    background-color: #fff;
+    cursor: pointer;
+}
+.split .splitter {
+    border: 2px solid #ddd;
+    width: 0;
+    padding: 0;
+    box-shadow: 0px 0px 5px #aaa;
+}
+#content.auth {
+    max-width: 1200px;
+    margin: auto;
+    padding: 2em;
+}
+#content.index {
+    max-width: 1200px;
+    margin: auto;
+}
+#content.index .field-wrapper {
+    display: grid;
+    min-height: 100vh;
+    background-color: #ccc;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 1em;
+    grid-row-gap: 1em;
+    padding: 1em;
+}
+#content .station p {
+    padding: 0.5em;
+}
+#content .station p:hover {
+    background-color: #ccc;
+}
+
+@font-face {
+    font-family: creamy;
+    src: url(../font/creamy.ttf);
+}
+@font-face {
+    font-family: atmosfears;
+    src: url(../font/atmospheric.ttf);
+}

@@ -1,0 +1,13 @@
+.station {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.station h2 {
+    grid-column: 1/-1;
+}
+.station .field {
+    grid-column: 1/-1;
+}
+.station button {
+    grid-row: 3;
+}

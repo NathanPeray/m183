@@ -1,0 +1,10 @@
+{
+    "base_url" : "localhost/m183/public",
+    "db" : {
+        "host" : "localhost",
+        "user" : "root",
+        "pw" : "",
+        "db" : "m183"
+    },
+    "pepper" : "ba0bdbbeab3ab787"
+}
