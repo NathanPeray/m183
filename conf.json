@@ -1,5 +1,5 @@
 {
-    "base_url" : "localhost/fahrplan/public",
+    "base_url" : "localhost/m183/public",
     "protocol" : "http",
     "db" : {
         "host" : "localhost",
