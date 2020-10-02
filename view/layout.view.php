@@ -4,22 +4,30 @@
         @@partial(layout.head)
     </head>
     <body>
-        <header>
+
+        <div id="app">
             @@auth
-            <nav>
-                @@partial(layout.nav)
-            </nav>
+                @@partial(layout.header)
             @@endauth
-        </header>
-        <main>
-            <div id="app">
+
+            <main>
                 @@content
-            </div>
-        </main>
+            </main>
+            @@auth
+                @@partial(layout.footer)
+            @@endauth
+        </div>
         @@auth
-        <footer>
-            @@partial(layout.footer)
-        </footer>
+            @@partial(layout.nav)
         @@endauth
+        <script>
+            var app;
+            var s = document.createElement("script");
+            s.src = "@@baseUrl/js/App.js";
+            document.head.appendChild(s);
+            s.onload = function() {
+                app = App.init("@@baseUrl");
+            }
+        </script>
     </body>
 </html>

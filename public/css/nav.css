@@ -1,0 +1,41 @@
+nav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+nav ul {
+    padding: 0;
+    margin: auto;
+    list-style-type: none;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    background-color: var(--primary-contrast);
+    max-width: var(--limit-x);
+}
+nav li {
+    display: block;
+    text-align: center;
+    padding: 0.5em;
+}
+nav li a {
+    display: inline-block;
+    width: 2em;
+    height: 2em;
+    margin: 0;
+    font-size: 1.4em;
+    cursor: pointer;
+    color: var(--primary);
+    position: relative;
+}
+nav li a.active {
+    color: var(--primary-contrast);
+    background-color: var(--primary);
+    border-radius: 10em;
+}
+nav li a i {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}

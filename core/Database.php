@@ -34,7 +34,6 @@
         public function selectFromUser($modelName, $userID) {
             $models = [];
             $query = "SELECT * FROM " . strtolower($modelName) . " WHERE user_FK = ?";
-            echo str_replace("?", $userID, $query);
             $stmt = $this->mysqli->prepare($query);
             $stmt->bind_param('i', $userID);
             $stmt->execute();
@@ -91,12 +90,14 @@
             $fields= array_splice($keys, 1);
             $ph = implode(", ", $fields);
             $valType = "";
+            $count = 1;
             foreach ($fields as $field) {
-                $ph = str_replace($field, "?", $ph);
+                $ph = str_replace($field, "?", $ph, $count);
                 $valType .= "s";
             }
             $query = "INSERT INTO " . strtolower($modelName) . "(" . implode(", ", $fields) . ") VALUES ($ph)";
             $stmt = $this->mysqli->prepare($query);
+
             $values = array_values($model->getProperties(false));
             $stmt->bind_param($valType, ...$values);
             $stmt->execute();
@@ -120,7 +121,11 @@
             $stmt->close();
         }
         public function delete($modelName, $id) {
-            $query = "DELETE FROM " .  strtolower($modelName) . "s WHERE id = " . $id;
+            $query = "DELETE FROM " .  strtolower($modelName) . " WHERE id = ?";
+            $stmt = $this->mysqli->prepare($query);
+            $stmt->bind_param('i', $id);
+            $stmt->execute();
+            $stmt->close();
         }
         public function getAuthString($userid) {
             global $confArray;

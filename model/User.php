@@ -24,23 +24,6 @@
             $this->salt = $salt == "" ? self::hexString(32) : $salt;
         }
 
-        function verify() {
-            $status = true;
-            $status = $this->verifyString($this->prename)   ? true : stroreError("prename") && $status;
-            $status = $this->verifyString($this->lastname)  ? true : stroreError("lastname") && $status;
-            $status = $this->verifyEmail($this->email)      ? true : stroreError("email") && $status;
-            if ($status) {
-                return true;
-            } else {
-                return false;
-            }
-        }
-        function storeError($fieldName) {
-            array_push($this->invalidField, $fieldName);
-            return false;
-        }
-
-
         static function hexString($bytes) {
             return bin2hex(openssl_random_pseudo_bytes($bytes / 2));
         }

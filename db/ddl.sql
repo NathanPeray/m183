@@ -12,3 +12,19 @@ CREATE TABLE user (
     hash CHAR(128) NOT NULL,
     salt CHAR(16) NOT NULL
 );
+CREATE TABLE route (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    stationfrom VARCHAR(255) NOT NULL,
+    stationto VARCHAR(255) NOT NULL,
+    stationfromexternal INT NOT NULL,
+    stationtoexternal INT NOT NULL,
+    user_FK INT NOT NULL,
+    FOREIGN KEY (user_FK) REFERENCES user(id)
+);
+CREATE TABLE station (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    external INT NOT NULL,
+    name VARCHAR(255) NOT NULL,
+    user_FK INT NOT NULL,
+    FOREIGN KEY (user_FK) REFERENCES user(id)
+);

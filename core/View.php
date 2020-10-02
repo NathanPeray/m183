@@ -26,7 +26,7 @@
             $viewContent = str_replace("@@endauth", "<?php endif; ?>", $viewContent);
             $viewContent = str_replace("@@title", $title, $viewContent);
             //$viewContent = str_replace("@@scripts", "var scripts = " . json_encode($confArray['scripts']) . ";", $viewContent);
-            $viewContent = str_replace("@@baseUrl", "http://" . $confArray['base_url'], $viewContent);
+            $viewContent = str_replace("@@baseUrl", $confArray['protocol'] . "://" . $confArray['base_url'], $viewContent);
             $viewContent;
             echo eval("?>" . $viewContent);
         }

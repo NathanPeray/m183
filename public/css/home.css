@@ -1,0 +1,200 @@
+
+.quick-route {
+    padding: 0 2em;
+    display: grid;
+    grid-template-columns: 1fr;
+}
+.quick-route .route {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr 1fr;
+    border-bottom: 1px solid var(--secondary);
+    padding: 1em 0;
+}
+.quick-route .route:last-child {
+    border-bottom: none;
+}
+.quick-route .route .go {
+    position: relative;
+}
+.quick-route .route .go input {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    font-size: 1em;
+    transform: translateY(-50%);
+    display: blocK;
+    border: none;
+    padding: 0.2em 0.5em;
+    border-radius: 0.3em;
+    color: var(--primary-contrast);
+    background-color: var(--primary);
+}
+.stations {
+    padding: 0 2em;
+}
+.stations .grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-row-gap: 0.5em;
+    grid-column-gap: 0.5em;
+    padding: 1em 0;
+    margin: 0 -1em;
+}
+.stations .grid a {
+    display: grid;
+    text-decoration: none;
+    cursor: pointer;
+}
+.stations .grid .station {
+    padding: 1em 0.3em;
+    text-align: center;
+    background-color: var(--secondary-contrast);
+    border-radius: 0.3em;
+    display: grid;
+}
+.stations .row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+#home .title {
+    grid-column: 1/-1;
+    background-color: var(--primary-contrast);
+    margin: 0 -2em;
+    padding: 0.5em 2em;
+}
+#home h4 {
+    color: var(--primary);
+}
+.station-search {
+    padding: 0 2em;
+    background-color: var(--secondary-contrast);
+}
+.station-search form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 1em;
+    grid-row-gap: 1em;
+    padding: 2em 1em;
+    border-radius: 0.5em;
+}
+.station-search form input[type="text"] {
+    grid-column: 1/-1;
+    padding: 0.7em;
+    border-radius: 0.3em;
+    border: none;
+    background-color: var(--light);
+}
+.station-search form button {
+    padding: 0.2em;
+    font-size: 1.1em;
+    border: none;
+    border-radius: 0.3em;
+    color: var(--primary-contrast);
+    background-color: var(--primary);
+}
+.station-board {
+    padding: 0 2em;
+}
+.station-board .departure {
+    display: grid;
+    grid-template-columns: 1fr 1fr 3fr;
+}
+.route-linker {
+    padding: 0 2em;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-row-gap: 1em;
+    grid-column-gap: 0.5em;
+}
+.route-linker a {
+    display: block;
+    text-decoration: none;
+    color: var(--primary-contrast);
+    background-color: var(--primary);
+    text-align: center;
+    padding: 0.5em;
+    border-radius: 0.3em;
+}
+.options {
+    padding:1em 2em;
+}
+.options .delete {
+    text-align: center;
+    padding: 1em;
+}
+.options .delete a {
+    display: inline-block;
+    margin: auto;
+    padding: 0.3em;
+    background-color: var(--error);
+    padding: 0.5em 2em;
+    border-radius: 0.3em;
+}
+.routing {
+    padding: 0 2em;
+}
+.route-planer {
+    padding-bottom: 1em;
+}
+.route-planer form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 0.5em;
+    grid-row-gap: 0.5em;
+}
+.route-planer .row {
+    grid-column: 1/-1;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    border-bottom: 1px solid var(--secondary-contrast);
+    padding: 0.5em;
+}
+.route-planer form input {
+    display: block;
+    border: none;
+    background-color: var(--light);
+    padding: 0.5em;
+}
+.route-planer form h5 {
+    padding: 0.5em;
+}
+.route-planer button {
+    padding: 0.5em;
+    border: none;
+    background-color: var(--primary-contrast);
+    color: var(--primary);
+    border-radius: 0.3em;
+}
+.connection {
+    display:grid;
+}
+.transport, .walk, .short-view {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 1em;
+    border: 1px solid black;
+    text-align: center;
+}
+.journey {
+    padding: 0 1em;
+    display: none;
+}
+.short-view {
+    background-color: var(--light);
+}
+.connection:active .journey{
+    display: block;
+}
+.head {
+    padding: 0 2em;
+}
+.head .title {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.head h5 {
+    color: var(--secondary);
+}
+.head .title form {
+    grid-column: 1/-1;
+}

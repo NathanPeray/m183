@@ -1,66 +1,41 @@
-@import url("forms.css");
-@import url("station.css");
+@import url("nav.css");
+@import url("home.css");
+@import url("vars.css");
+@import url("auth.css");
 body {
-    background-color: #eee;
     font-family: calibri;
-}
-* {
     margin: 0;
     padding: 0;
+    background-color: var(--light);
+    font-size: 19px;
 }
-
-#content.split {
-    display: grid;
-    grid-template-columns: 1fr auto 1fr;
-    vertical-align: middle;
-}
-#content .register, #content .login {
-    padding: 3em;
-    margin: auto 0;
-    text-align: center;
-}
-#content .register .head, #content .login .head {
+#home {
     display: block;
-    padding: 2em;
-    background-color: #fff;
-    cursor: pointer;
-}
-.split .splitter {
-    border: 2px solid #ddd;
-    width: 0;
-    padding: 0;
-    box-shadow: 0px 0px 5px #aaa;
-}
-#content.auth {
-    max-width: 1200px;
+    max-width: var(--limit-x);
     margin: auto;
-    padding: 2em;
-}
-#content.index {
-    max-width: 1200px;
-    margin: auto;
-}
-#content.index .field-wrapper {
-    display: grid;
+    display: block;
+    position: relative;
     min-height: 100vh;
-    background-color: #ccc;
-    grid-template-columns: 1fr 1fr;
-    grid-column-gap: 1em;
-    grid-row-gap: 1em;
-    padding: 1em;
+    background-color: #fff;
+    margin-bottom: 4em;
 }
-#content .station p {
+h1, h2, h3, h4, h5, h6 {
+    color: var(--primary-contrast);
+    margin: 0;
+}
+p {
+    color: var(--secondary);
+    margin: 0;
+}
+header {
+    display: block;
+    background-color: var(--primary);
+    max-width: var(--limit-x);
+    margin: auto;
+}
+header h2 {
     padding: 0.5em;
 }
-#content .station p:hover {
-    background-color: #ccc;
-}
-
-@font-face {
-    font-family: creamy;
-    src: url(../font/creamy.ttf);
-}
-@font-face {
-    font-family: atmosfears;
-    src: url(../font/atmospheric.ttf);
+input:focus, select:focus, button {
+    outline: none;
 }

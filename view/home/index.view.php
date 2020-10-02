@@ -1,26 +1,53 @@
-<div id="content" class="index">
-    <div class="field-wrapper">
-        <div class="field-1 field">
-            @@partial(timetable.station)
+<div id="home">
+    <div class="quick-route">
+        <div class="title">
+            <h4>Routes</h4>
         </div>
-        <div class="field-2 field">
-            @@partial(timetable.station)
-        </div>
-        <div class="field-3 field">
-            @@partial(timetable.route)
-        </div>
-        <div class="field-4 field">
-
-        </div>
-        <div class="field-5 field">
-
-        </div>
-        <div class="field-6 field">
-
-        </div>
+        <form class="route">
+            <div class="from">
+                <h5>From:</h5>
+                <p>Zürich HB</p>
+                <input type="hidden" name="from" value="">
+            </div>
+            <div class="to">
+                <h5>To:</h5>
+                <p>Regensdorf, Zentrum</p>
+                <input type="hidden" name="to" value="">
+            </div>
+            <div class="go">
+                <input type="submit" value="GO!">
+            </div>
+        </form>
+        <form class="route">
+            <div class="from">
+                <h5>From:</h5>
+                <p>Zürich HB</p>
+                <input type="hidden" name="from" value="">
+            </div>
+            <div class="to">
+                <h5>To:</h5>
+                <p>Regensdorf, Zentrum</p>
+                <input type="hidden" name="to" value="">
+            </div>
+            <div class="go">
+                <input type="submit" value="GO!">
+            </div>
+        </form>
+        <form class="route">
+            <div class="from">
+                <h5>From:</h5>
+                <p>Zürich HB</p>
+                <input type="hidden" name="from" value="">
+            </div>
+            <div class="to">
+                <h5>To:</h5>
+                <p>Regensdorf, Zentrum</p>
+                <input type="hidden" name="to" value="">
+            </div>
+            <div class="go">
+                <input type="submit" value="GO!">
+            </div>
+        </form>
     </div>
-    <div class="sidemenu">
-
-    </div>
-
+    @@partial(module.stations)
 </div>

@@ -1,0 +1,14 @@
+:root {
+    --primary           : #336699;
+    --primary-contrast  : #b3cce6;
+    --secondary         : #5c8a8a;
+    --secondary-contrast: #a3c2c2;
+    --dark              : #333333;
+    --light             : #e6e6e6;
+
+    --success           : #00cc66;
+    --warning           : #ffc266;
+    --error             : #ff794d;
+
+    --limit-x           : 500px;
+}

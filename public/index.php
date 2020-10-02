@@ -9,6 +9,8 @@
     /* MODELS */
     require '../model/Model.php';
     require '../model/User.php';
+    require '../model/Route.php';
+    require '../model/Station.php';
 
     $router = Router::getInstance();
     $auth = Auth::getInstance();
@@ -17,7 +19,7 @@
         $auth->init();
         $router->route($confArray['base_url']);
     } else {
-
+        
     }
 
 ?>
