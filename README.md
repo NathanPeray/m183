@@ -6,5 +6,5 @@
 3. The databse is created, and a user created.
 4. Visit http://localhost/m183/public in your browser
 5. Sign in with the created user:
-..* "test@mail.ch" 
-..* password: "123"
+  * "test@mail.ch"
+  * password: "123"
